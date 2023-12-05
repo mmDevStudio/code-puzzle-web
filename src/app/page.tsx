@@ -1,10 +1,11 @@
 // import {Post} from "@/components/Post";
 
+import { Button } from '@/components/ui/button'
+
 export default function Home() {
   return (
-    <>
-      {/* <Post/> */}
-      hi
-    </>
+    <div>
+      <Button>Click Me</Button>
+    </div>
   )
 }
