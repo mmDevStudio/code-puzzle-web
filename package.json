@@ -1,12 +1,13 @@
 {
-  "name": "shadcn-test",
-  "version": "0.1.0",
+  "name": "code-puzzle-web",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
