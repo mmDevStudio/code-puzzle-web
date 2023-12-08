@@ -8,8 +8,8 @@ import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
-    <>
-      <div className="lg:hidden">
+    <div>
+      <div className="h-screen bg-slate-50 lg:hidden">
         <FeedSelector />
 
         <Navbar />
@@ -19,6 +19,6 @@ export default function Home() {
           <Button>Button</Button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
