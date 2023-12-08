@@ -4,8 +4,6 @@ import FeedSelector from '@/components/mobile/feed-selector'
 import Navbar from '@/components/mobile/navbar'
 import { Button } from '@/components/ui/button'
 
-// make code testwise darkmode
-
 export default function Home() {
   return (
     <div>

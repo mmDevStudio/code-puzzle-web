@@ -27,7 +27,7 @@ function Navbar() {
         <HomeIcon
           height={32}
           width={32}
-          className="text-slate-700 dark:text-slate-200 fill-current"
+          className="fill-current text-slate-700 dark:text-slate-200"
         />
       </div>
       <div className="flex w-1/5 items-center justify-center">
