@@ -1,18 +1,43 @@
-// import {Post} from "@/components/Post";
+'use client'
+
+import { PlusIcon } from 'lucide-react'
 
 import FeedSelector from '@/components/mobile/feed-selector'
 import Navbar from '@/components/mobile/navbar'
-// import Post, { POST_EXAMPLE_DATA } from '@/components/post'
+
+function MobileHome() {
+  return (
+    <>
+      <FeedSelector />
+
+      {/* TODO: posts */}
+
+      <div className="fixed bottom-20 right-4 rounded-full bg-stone-200 p-4 dark:bg-stone-800">
+        <PlusIcon
+          size={32}
+          onClick={() => {
+            window.location.href = '/createPost'
+          }}
+        />
+      </div>
+
+      <Navbar selected="home" />
+    </>
+  )
+}
+
+function DesktopHome() {
+  return <div>Test</div>
+}
 
 export default function Home() {
   return (
-    <div>
-      <div className="h-screen bg-slate-50 dark:bg-slate-900 lg:hidden">
-        <FeedSelector />
-
-        <Navbar />
+    <div className="h-screen bg-slate-50 dark:bg-stone-900">
+      <div className="lg:hidden">
+        <MobileHome />
+      </div><div className="hidden lg:block">
+        <DesktopHome />
       </div>
-      <div className="hidden lg:block">Desktop</div>
     </div>
   )
 }
