@@ -1,12 +1,12 @@
-// import {Post} from "@/components/Post";
+'use client'
 
-import MobileHome from '@/components/routes/mobile/home'
+import MobileCreatePost from '@/components/routes/mobile/createPost'
 import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
     <div>
-      <MobileHome />
+      <MobileCreatePost />
       <div className="hidden lg:block">
         <div className="flex h-screen flex-col items-center justify-center">
           <Button>Button</Button>

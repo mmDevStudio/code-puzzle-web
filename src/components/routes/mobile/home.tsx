@@ -8,7 +8,7 @@ function MobileHome() {
 
       {/* TODO: posts */}
 
-      <Navbar />
+      <Navbar selected="home" />
     </div>
   )
 }
