@@ -1,7 +1,35 @@
-'use client'
+import { ArrowLeft, Check } from 'lucide-react'
+import { useSearchParams } from 'next/navigation'
 
-import DesktopCreatePost from '@/components/routes/desktop/createPost'
-import MobileCreatePost from '@/components/routes/mobile/createPost'
+import Headbar from '@/components/mobile/headbar'
+import Navbar from '@/components/mobile/navbar'
+
+function MobileCreatePost() {
+  const vscode = useSearchParams().get('vscode')
+
+  return (
+    <>
+      <Headbar
+        leftIcon={ArrowLeft}
+        rightIcon={Check}
+        title="Create Post"
+        leftAction={() => {
+          window.location.href = '/'
+        }}
+      />
+
+      {vscode && (
+        <div className="absolute top-20">{JSON.stringify(vscode)}</div>
+      )}
+
+      <Navbar />
+    </>
+  )
+}
+
+function DesktopCreatePost() {
+  return <div>Test</div>
+}
 
 export default function Home() {
   return (
@@ -15,3 +43,4 @@ export default function Home() {
     </div>
   )
 }
+
