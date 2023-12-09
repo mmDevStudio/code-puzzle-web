@@ -35,8 +35,7 @@ export default function Home() {
     <div className="h-screen bg-slate-50 dark:bg-stone-900">
       <div className="lg:hidden">
         <MobileHome />
-      </div>
-      <div className="hidden lg:block">
+      </div><div className="hidden lg:block">
         <DesktopHome />
       </div>
     </div>
