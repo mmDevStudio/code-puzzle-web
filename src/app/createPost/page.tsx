@@ -1,3 +1,5 @@
+'use client'
+
 import { ArrowLeft, Check } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 
@@ -43,4 +45,3 @@ export default function Home() {
     </div>
   )
 }
-

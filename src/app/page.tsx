@@ -1,4 +1,4 @@
-// import {Post} from "@/components/Post";
+'use client'
 
 import { PlusIcon } from 'lucide-react'
 
