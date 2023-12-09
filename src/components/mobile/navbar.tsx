@@ -34,7 +34,7 @@ function Navbar(
           width={24}
           className={`text-slate-700 dark:text-stone-200 ${
             selected === 'chat' ? 'fill-current' : ''
-            }`}
+          }`}
         />
       </div>
       <div className="flex w-1/5 items-center justify-center">
@@ -45,7 +45,7 @@ function Navbar(
             selected === 'home' ? 'fill-current' : ''
           }`}
           onClick={() => {
-            window.location.href = '/'
+            if (selected !== 'home') window.location.href = '/'
           }}
         />
       </div>

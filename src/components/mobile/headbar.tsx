@@ -6,16 +6,26 @@ interface HeadbarProps {
   leftIcon: LucideIcon
   rightIcon: LucideIcon
   title: string
+  leftAction?: () => void
+  rightAction?: () => void
 }
 
-function Headbar({ leftIcon, rightIcon, title }: HeadbarProps) {
+function Headbar({
+  leftIcon,
+  leftAction,
+  rightIcon,
+  rightAction,
+  title,
+}: HeadbarProps) {
   const LeftIcon: React.ReactNode = React.createElement(leftIcon, {
     size: 32,
     className: 'text-slate-500 dark:text-stone-500',
+    onClick: leftAction,
   })
   const RightIcon: React.ReactNode = React.createElement(rightIcon, {
     size: 32,
     className: 'text-slate-500 dark:text-stone-500',
+    onClick: rightAction,
   })
 
   return (
