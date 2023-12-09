@@ -6,18 +6,13 @@ import Link from 'next/link'
 import getUserInitials from '@/lib/getUserInitials'
 import { PostType } from '@/types/post'
 
-import { Avatar, AvatarFallback, AvatarImage } from './shadcn/ui/avatar'
+import UserAvatar from './userAvatar'
 
 function PostHeader({ author, project, relTimestamp }: PostType) {
-  const userInitials = getUserInitials(author.username)
-
   return (
     <header className="flex items-center gap-x-2.5">
       {/* avatar */}
-      <Avatar className="h-8 w-8">
-        <AvatarImage src={author.avatar} />
-        <AvatarFallback>{userInitials.toUpperCase()}</AvatarFallback>
-      </Avatar>
+      <UserAvatar {...author} />
 
       {/* project + user meta */}
       <div className="mr-auto flex flex-col">
@@ -61,10 +56,7 @@ function PostActions({ interactions }: PostType) {
       <ol className="flex">
         {interactions.topThreeCommentators.map(user => (
           <li key={user.id}>
-            <Avatar className="ml-[-5px] h-5 w-5">
-              <AvatarImage src={user.avatar} />
-              <AvatarFallback>{getUserInitials(user.username)}</AvatarFallback>
-            </Avatar>
+            <UserAvatar {...user} />
           </li>
         ))}
       </ol>
