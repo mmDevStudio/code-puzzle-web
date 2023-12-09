@@ -1,5 +1,6 @@
-import Post, { POST_EXAMPLE_DATA } from '@/components/post'
+import Post from '@/components/post'
+import { EXAMPLE_POST } from '@/types/post'
 
 export default function PostExamplePage() {
-  return <Post {...POST_EXAMPLE_DATA} />
+  return <Post {...EXAMPLE_POST} />
 }
