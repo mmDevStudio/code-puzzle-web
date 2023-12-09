@@ -6,7 +6,7 @@ function FeedSelector() {
   const [selected, setSelected] = useState('explore')
 
   return (
-    <div className="h-fit-content fixed left-0 top-0 flex w-full border-b border-slate-300 text-lg font-semibold dark:border-slate-700">
+    <div className="h-fit-content fixed left-0 top-0 flex w-full border-b border-slate-300 text-lg font-semibold dark:border-stone-700">
       <div
         className="flex w-1/2 items-center justify-center py-3"
         onClick={() => setSelected('explore')}
@@ -17,7 +17,7 @@ function FeedSelector() {
         <div
           className={` box-sizing flex items-center justify-center px-6 pb-1 pt-2 transition duration-500 ease-in-out ${
             selected === 'explore'
-              ? 'border-b-2 border-slate-500'
+              ? 'border-b-2 border-slate-500 dark:border-stone-500'
               : 'border-b-0'
           }`}
         >
@@ -34,7 +34,7 @@ function FeedSelector() {
         <div
           className={`box-sizing flex items-center justify-center px-6 pb-1 pt-2 transition duration-500 ease-in-out ${
             selected === 'followed'
-              ? 'border-b-2 border-slate-500'
+              ? 'border-b-2 border-slate-500 dark:border-stone-500'
               : 'border-b-0 '
           }`}
         >
