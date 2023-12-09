@@ -23,7 +23,9 @@ function MobileCreatePost() {
         }}
       />
 
-      <div className="absolute top-20">{JSON.stringify(vscode)}</div>
+      {vscode && (
+        <div className="absolute top-20">{JSON.stringify(vscode)}</div>
+      )}
 
       <Navbar />
     </>
