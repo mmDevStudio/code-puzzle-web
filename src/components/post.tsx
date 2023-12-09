@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { GithubIcon, Share2Icon, StarHalfIcon, StarIcon } from 'lucide-react'
+import { GithubIcon, Share2Icon, StarIcon } from 'lucide-react'
 import Link from 'next/link'
 
 import getUserInitials from '@/lib/getUserInitials'
 import { PostType } from '@/types/post'
 
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from './shadcn/ui/avatar'
 
 function PostHeader({ author, project, relTimestamp }: PostType) {
   const userInitials = getUserInitials(author.username)
@@ -18,6 +18,7 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
         <AvatarImage src={author.avatar} />
         <AvatarFallback>{userInitials.toUpperCase()}</AvatarFallback>
       </Avatar>
+
       {/* project + user meta */}
       <div className="mr-auto flex flex-col">
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-primary">
@@ -35,6 +36,7 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
           {project.name}
         </Link>
       </div>
+
       {/* relative timestamp */}
       <div className="text-sm font-normal leading-none text-muted-foreground">
         {relTimestamp}
@@ -44,6 +46,7 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
 }
 
 function PostContent({ content }: PostType) {
+  // Todo: Support interactive content (code windows, etc.)
   return (
     <main className="p-1">
       <p className="line-clamp-5 text-base text-primary">{content}</p>
@@ -65,6 +68,7 @@ function PostActions({ interactions }: PostType) {
           </li>
         ))}
       </ol>
+
       {/* Number of comments */}
       <span className="mr-auto text-sm font-normal leading-none text-muted-foreground">
         {interactions.numberOfComments} Comments
@@ -75,6 +79,7 @@ function PostActions({ interactions }: PostType) {
         <StarIcon className="mr-[5px] inline-block h-4 w-4 text-muted-foreground" />
         {interactions.numberOfLikes} Likes
       </span>
+
       {/* Actions/ Number of shares */}
       <span className="text-sm font-normal leading-none text-muted-foreground">
         <Share2Icon className="mr-[5px] inline-block h-4 w-4 text-muted-foreground" />
