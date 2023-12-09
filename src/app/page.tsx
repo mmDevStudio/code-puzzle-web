@@ -1,7 +1,7 @@
 // import {Post} from "@/components/Post";
 
+import DesktopHome from '@/components/routes/desktop/home'
 import MobileHome from '@/components/routes/mobile/home'
-import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -10,9 +10,7 @@ export default function Home() {
         <MobileHome />
       </div>
       <div className="hidden lg:block">
-        <div className="flex h-screen flex-col items-center justify-center">
-          <Button>Button</Button>
-        </div>
+        <DesktopHome />
       </div>
     </div>
   )

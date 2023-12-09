@@ -9,7 +9,7 @@ import {
 } from 'lucide-react'
 
 interface NavbarProps {
-  selected: 'search' | 'chat' | 'home' | 'projects' | 'user'
+  selected?: 'search' | 'chat' | 'home' | 'projects' | 'user'
 }
 
 function Navbar(

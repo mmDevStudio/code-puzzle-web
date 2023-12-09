@@ -1,7 +1,7 @@
 'use client'
 
+import DesktopCreatePost from '@/components/routes/desktop/createPost'
 import MobileCreatePost from '@/components/routes/mobile/createPost'
-import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -10,9 +10,7 @@ export default function Home() {
         <MobileCreatePost />
       </div>
       <div className="hidden lg:block">
-        <div className="flex h-screen flex-col items-center justify-center">
-          <Button>Button</Button>
-        </div>
+        <DesktopCreatePost />
       </div>
     </div>
   )

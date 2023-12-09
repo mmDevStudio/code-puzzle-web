@@ -15,7 +15,7 @@ function MobileCreatePost() {
         }}
       />
 
-      <Navbar selected="home" />
+      <Navbar />
     </>
   )
 }
