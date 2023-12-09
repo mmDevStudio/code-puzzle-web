@@ -1,16 +1,8 @@
 {
   "extends": ["next/core-web-vitals", "airbnb", "prettier"],
   "rules": {
-    "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "warn",
     "import/extensions": "off",
-    "react/jsx-filename-extension": [
-      "error",
-      {
-        "extensions": [".jsx", ".tsx"]
-      }
-    ],
-    "react/require-default-props": "off",
-    "react/jsx-props-no-spreading": "off",
     "import/order": [
       "error",
       {
@@ -36,7 +28,23 @@
           "caseInsensitive": true
         }
       }
-    ]
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unused-prop-types": "off"
   },
-  "ignorePatterns": ["node_modules/", "*.config.js", "*.config.ts"]
+  "ignorePatterns": [
+    "node_modules/",
+    "*.config.js",
+    "*.config.ts",
+    "src/components/shadcn/ui/*.tsx",
+    "src/components/shadcn/ui/*.ts"
+  ]
 }

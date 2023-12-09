@@ -2,7 +2,7 @@
 
 import FeedSelector from '@/components/mobile/feed-selector'
 import Navbar from '@/components/mobile/navbar'
-import { Button } from '@/components/ui/button'
+// import Post, { POST_EXAMPLE_DATA } from '@/components/post'
 
 export default function Home() {
   return (
@@ -12,11 +12,7 @@ export default function Home() {
 
         <Navbar />
       </div>
-      <div className="hidden lg:block">
-        <div className="flex h-screen flex-col items-center justify-center">
-          <Button>Button</Button>
-        </div>
-      </div>
+      <div className="hidden lg:block">Desktop</div>
     </div>
   )
 }
