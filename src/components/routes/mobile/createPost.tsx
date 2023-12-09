@@ -5,12 +5,9 @@ import { useSearchParams } from 'next/navigation'
 
 import Headbar from '@/components/mobile/headbar'
 import Navbar from '@/components/mobile/navbar'
-import type { VSCodeImportedData } from '@/lib/types'
 
 function MobileCreatePost() {
-  const vscode: VSCodeImportedData = JSON.parse(
-    useSearchParams().get('vscode') || '{}'
-  )
+  const vscode = useSearchParams().get('vscode')
 
   return (
     <>
