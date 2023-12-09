@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 export default function Home() {
   return (
     <div>
-      <div className="h-screen bg-slate-50 dark:bg-stone-900 lg:hidden">
+      <div className="h-screen bg-slate-50 dark:bg-slate-900 lg:hidden">
         <FeedSelector />
 
         <Navbar />
