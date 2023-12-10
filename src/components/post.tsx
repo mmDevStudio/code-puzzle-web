@@ -46,16 +46,11 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
   )
 }
 
-function TextBlock({ text }: { text: string }) {
-  // TODO: style text blocks
-  return <p>{text}</p>
-}
-
 function PostContent({ content }: PostType) {
   const contentBlocks = content.map(block => {
     switch (block.type) {
       case 'text':
-        return <TextBlock text={block.data} />
+        return <p className='line-clamp-5 text-base text-primary' >{block.data}</p>
       case 'code':
         return <Code data={block.data} />
       default:
