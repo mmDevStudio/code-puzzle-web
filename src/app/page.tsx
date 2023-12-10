@@ -1,8 +1,5 @@
 'use client'
 
-import Post from '@/components/post'
-import { EXAMPLE_POST } from '@/types/post'
-
 import DesktopHome from './desktop'
 import MobileHome from './mobile'
 

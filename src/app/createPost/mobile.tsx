@@ -8,7 +8,7 @@ export default function MobileCreatePost() {
   const vscode = useSearchParams().get('vscode')
 
   return (
-    <>
+    <div className="flex h-screen flex-col">
       <Headbar
         leftIcon={ArrowLeft}
         rightIcon={Check}
@@ -22,7 +22,9 @@ export default function MobileCreatePost() {
         <div className="absolute top-20">{JSON.stringify(vscode)}</div>
       )}
 
-      <Navbar />
-    </>
+      <div className="mt-auto">
+        <Navbar />
+      </div>
+    </div>
   )
 }
