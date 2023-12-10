@@ -1,3 +1,4 @@
+import { Project } from './project'
 import { EXAMPLE_USERS, UserType } from './user'
 
 export type CodeBlock = [{ filename: string; languageId: string; code: string }]
@@ -15,11 +16,6 @@ export type Interactions = {
   numberOfComments: number
   numberOfShares: number
   topThreeCommentators: UserType[]
-}
-
-export type Project = {
-  name: string
-  url: string
 }
 
 export type PostType = {

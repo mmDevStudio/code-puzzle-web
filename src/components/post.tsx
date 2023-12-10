@@ -6,7 +6,7 @@ import Link from 'next/link'
 import getUserInitials from '@/lib/getUserInitials'
 import { PostType } from '@/types/post'
 
-import Code from './code'
+import CodeWindow from './code-window'
 import { Avatar, AvatarFallback, AvatarImage } from './shadcn/ui/avatar'
 
 function PostHeader({ author, project, relTimestamp }: PostType) {
@@ -57,7 +57,7 @@ function PostContent({ content }: PostType) {
       case 'text':
         return <TextBlock text={block.data} />
       case 'code':
-        return <Code data={block.data} />
+        return <CodeWindow data={block.data} />
       default:
         return null
     }

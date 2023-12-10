@@ -1,7 +1,7 @@
-import { CodeBlock as CodeBlockType } from '@/types/post'
+import { CodeBlock } from '@/types/post'
 
 // TODO: style code blocks
-function Code({ data }: { data: CodeBlockType }) {
+function CodeWindow({ data }: { data: CodeBlock }) {
   return (
     <div>
       {data.map(({ languageId, code, filename }) => (
@@ -14,4 +14,4 @@ function Code({ data }: { data: CodeBlockType }) {
   )
 }
 
-export default Code
+export default CodeWindow
