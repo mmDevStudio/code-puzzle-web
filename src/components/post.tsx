@@ -6,6 +6,7 @@ import Link from 'next/link'
 import getUserInitials from '@/lib/getUserInitials'
 import { PostType } from '@/types/post'
 
+import Code from './code'
 import { Avatar, AvatarFallback, AvatarImage } from './shadcn/ui/avatar'
 
 function PostHeader({ author, project, relTimestamp }: PostType) {
@@ -45,13 +46,24 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
   )
 }
 
+function TextBlock({ text }: { text: string }) {
+  // TODO: style text blocks
+  return <p>{text}</p>
+}
+
 function PostContent({ content }: PostType) {
-  // Todo: Support interactive content (code windows, etc.)
-  return (
-    <main className="p-1">
-      <p className="line-clamp-5 text-base text-primary">{content}</p>
-    </main>
-  )
+  const contentBlocks = content.map(block => {
+    switch (block.type) {
+      case 'text':
+        return <TextBlock text={block.data} />
+      case 'code':
+        return <Code data={block.data} />
+      default:
+        return null
+    }
+  })
+
+  return <div>{contentBlocks}</div>
 }
 
 function PostActions({ interactions }: PostType) {
