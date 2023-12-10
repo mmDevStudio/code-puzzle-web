@@ -5,7 +5,7 @@ function CodeWindow({ data }: { data: CodeBlock }) {
   return (
     <div>
       {data.map(({ languageId, code, filename }) => (
-        <pre className={`language-[${languageId}]`}>
+        <pre key={code} className={`language-[${languageId}]`}>
           <div>{filename}</div>
           <code>{code}</code>
         </pre>

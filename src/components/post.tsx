@@ -5,10 +5,9 @@ import Link from 'next/link'
 
 import { PostType } from '@/types/post'
 
+import CodeWindow from './code-window'
 import { Heading4, TextSmall } from './typography'
 import UserAvatar from './userAvatar'
-import CodeWindow from './code-window'
-import { Avatar, AvatarFallback, AvatarImage } from './shadcn/ui/avatar'
 
 function PostHeader({ author, project, relTimestamp }: PostType) {
   return (
@@ -43,12 +42,19 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
 }
 
 function PostContent({ content }: PostType) {
-  const contentBlocks = content.map(block => {
+  const contentBlocks = content.map((block, i) => {
     switch (block.type) {
       case 'text':
-        return <p className='line-clamp-5 text-base text-primary' >{block.data}</p>
+        return (
+          <p
+            key={`${i.toString()}`}
+            className="line-clamp-5 text-base text-primary"
+          >
+            {block.data}
+          </p>
+        )
       case 'code':
-        return <CodeWindow data={block.data} />
+        return <CodeWindow key={`${i.toString()}`} data={block.data} />
       default:
         return null
     }
