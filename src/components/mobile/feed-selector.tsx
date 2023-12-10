@@ -6,7 +6,7 @@ function FeedSelector() {
   const [selected, setSelected] = useState('explore')
 
   return (
-    <div className="select-none h-fit-content fixed left-0 top-0 flex w-full border-b border-slate-300 text-lg font-semibold dark:border-stone-700">
+    <div className="h-fit-content flex w-full select-none border-b border-slate-300 text-lg font-semibold dark:border-stone-700">
       <div
         className="flex w-1/2 items-center justify-center py-5"
         onClick={() => setSelected('explore')}
