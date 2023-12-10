@@ -7,6 +7,8 @@ import { PostType } from '@/types/post'
 
 import { Heading4, TextSmall } from './typography'
 import UserAvatar from './userAvatar'
+import CodeWindow from './code-window'
+import { Avatar, AvatarFallback, AvatarImage } from './shadcn/ui/avatar'
 
 function PostHeader({ author, project, relTimestamp }: PostType) {
   return (
@@ -41,12 +43,18 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
 }
 
 function PostContent({ content }: PostType) {
-  // Todo: Support interactive content (code windows, etc.)
-  return (
-    <main className="p-1">
-      <p className="line-clamp-5 text-base text-primary">{content}</p>
-    </main>
-  )
+  const contentBlocks = content.map(block => {
+    switch (block.type) {
+      case 'text':
+        return <p className='line-clamp-5 text-base text-primary' >{block.data}</p>
+      case 'code':
+        return <CodeWindow data={block.data} />
+      default:
+        return null
+    }
+  })
+
+  return <div>{contentBlocks}</div>
 }
 
 function PostActions({ interactions }: PostType) {
