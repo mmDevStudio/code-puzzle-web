@@ -18,7 +18,7 @@ function Navbar(
   }
 ) {
   return (
-    <div className="fixed bottom-0 left-0 flex h-16 w-full border-t-2 bg-slate-100 dark:border-stone-800 dark:bg-stone-900">
+    <div className="flex h-16 w-full border-t-2 bg-slate-100 dark:border-stone-800 dark:bg-stone-900">
       <div className="flex w-1/5 items-center justify-center">
         <SearchIcon
           height={24}

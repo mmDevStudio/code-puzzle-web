@@ -36,3 +36,15 @@ export const EXAMPLE_POST: PostType = {
   },
   relTimestamp: '10min ago',
 }
+
+// spread all properties of EXAMPLE_POST on the <Post /> component
+/*
+  <Post
+    id={EXAMPLE_POST.id}
+    author={EXAMPLE_POST.author}
+    content={EXAMPLE_POST.content}
+    interactions={EXAMPLE_POST.interactions}
+    project={EXAMPLE_POST.project}
+    relTimestamp={EXAMPLE_POST.relTimestamp}
+  />
+*/

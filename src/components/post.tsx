@@ -16,7 +16,7 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
 
       {/* project + user meta */}
       <div className="mr-auto flex flex-col">
-        <Heading4>
+        <Heading4 className="truncate">
           {author.username}
           <TextSmall className="ml-[5px] inline text-muted">
             @{author.tag}
@@ -33,7 +33,7 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
       </div>
 
       {/* relative timestamp */}
-      <div className="text-sm font-normal leading-none text-muted">
+      <div className="truncate text-sm font-normal leading-none text-muted">
         {relTimestamp}
       </div>
     </header>
