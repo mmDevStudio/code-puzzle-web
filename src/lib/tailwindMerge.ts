@@ -5,6 +5,7 @@ type Option<
       [key: string]: any
     }
   : ComponentProps) & {
+  // eslint-disable-next-line no-unused-vars
   use: string | ((props: any) => string)
 }
 

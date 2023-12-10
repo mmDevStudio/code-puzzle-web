@@ -3,9 +3,9 @@ import React from 'react'
 import { GithubIcon, Share2Icon, StarIcon } from 'lucide-react'
 import Link from 'next/link'
 
-import getUserInitials from '@/lib/getUserInitials'
 import { PostType } from '@/types/post'
 
+import { Heading4, TextSmall } from './typography'
 import UserAvatar from './userAvatar'
 
 function PostHeader({ author, project, relTimestamp }: PostType) {
@@ -16,24 +16,24 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
 
       {/* project + user meta */}
       <div className="mr-auto flex flex-col">
-        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-primary">
+        <Heading4>
           {author.username}
-          <span className="ml-[5px] text-sm font-semibold leading-none text-muted-foreground">
+          <TextSmall className="ml-[5px] inline text-muted">
             @{author.tag}
-          </span>
-        </h4>
+          </TextSmall>
+        </Heading4>
 
         <Link
-          className="w-fit text-sm font-normal text-muted-foreground"
+          className="w-fit text-sm font-normal text-muted"
           href={project.url}
         >
-          <GithubIcon className="mr-[5px] inline-block h-4 w-4 text-muted-foreground" />
+          <GithubIcon className="mr-[5px] inline-block h-4 w-4 text-muted" />
           {project.name}
         </Link>
       </div>
 
       {/* relative timestamp */}
-      <div className="text-sm font-normal leading-none text-muted-foreground">
+      <div className="text-sm font-normal leading-none text-muted">
         {relTimestamp}
       </div>
     </header>
@@ -55,26 +55,26 @@ function PostActions({ interactions }: PostType) {
       {/* Top 3 Commentator Avatars */}
       <ol className="flex">
         {interactions.topThreeCommentators.map(user => (
-          <li key={user.id}>
-            <UserAvatar {...user} />
+          <li key={user.id} className="-ml-2.5 first:m-0">
+            <UserAvatar size={24} {...user} />
           </li>
         ))}
       </ol>
 
       {/* Number of comments */}
-      <span className="mr-auto text-sm font-normal leading-none text-muted-foreground">
+      <span className="mr-auto text-sm font-normal leading-none text-muted">
         {interactions.numberOfComments} Comments
       </span>
 
       {/* Actions/ Number of likes */}
-      <span className="text-sm font-normal leading-none text-muted-foreground">
-        <StarIcon className="mr-[5px] inline-block h-4 w-4 text-muted-foreground" />
-        {interactions.numberOfLikes} Likes
+      <span className="text-sm font-normal leading-none text-muted">
+        <StarIcon className="mr-[5px] inline-block h-4 w-4 text-muted" />
+        {interactions.numberOfLikes}
       </span>
 
       {/* Actions/ Number of shares */}
-      <span className="text-sm font-normal leading-none text-muted-foreground">
-        <Share2Icon className="mr-[5px] inline-block h-4 w-4 text-muted-foreground" />
+      <span className="text-sm font-normal leading-none text-muted">
+        <Share2Icon className="mr-[5px] inline-block h-4 w-4 text-muted" />
         {interactions.numberOfShares}
       </span>
     </footer>
