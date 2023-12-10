@@ -1,5 +1,6 @@
 import { CodeBlock as CodeBlockType } from '@/types/post'
 
+// TODO: style code blocks
 function Code({ data }: { data: CodeBlockType }) {
   return (
     <div>
