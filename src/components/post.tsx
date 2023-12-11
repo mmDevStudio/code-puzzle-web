@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { PostType } from '@/types/post'
 
-import CodeWindow from './code-window'
+import CodeWindow from './codeWindow'
 import { Heading4, TextSmall } from './typography'
 import UserAvatar from './userAvatar'
 
@@ -17,7 +17,7 @@ function PostHeader({ author, project, relTimestamp }: PostType) {
 
       {/* project + user meta */}
       <div className="mr-auto flex flex-col">
-        <Heading4 className="truncate">
+        <Heading4 className="truncate dark:text-onPrimary">
           {author.username}
           <TextSmall className="ml-[5px] inline text-muted">
             @{author.tag}
@@ -48,13 +48,13 @@ function PostContent({ content }: PostType) {
         return (
           <p
             key={`${i.toString()}`}
-            className="line-clamp-5 text-base text-primary"
+            className="line-clamp-5 text-base text-primary dark:text-onPrimary"
           >
             {block.data}
           </p>
         )
       case 'code':
-        return <CodeWindow key={`${i.toString()}`} data={block.data} />
+        return <CodeWindow key={`${i.toString()}`} files={block.data} />
       default:
         return null
     }

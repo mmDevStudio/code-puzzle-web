@@ -1,6 +1,6 @@
 import { PlusIcon } from 'lucide-react'
 
-import FeedSelector from '@/components/mobile/feed-selector'
+import FeedSelector from '@/components/mobile/feedSelector'
 import Navbar from '@/components/mobile/navbar'
 import Post from '@/components/post'
 import PostContainer from '@/components/postContainer'
