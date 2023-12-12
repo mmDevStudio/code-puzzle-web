@@ -9,7 +9,7 @@ const config: Config = {
       colors: {
         primary: colors.stone[900],
         onPrimary: colors.stone[50],
-        muted: colors.slate[500],
+        muted: colors.stone[500],
       },
       fontFamily: {
         body: ['var(--font-body)'],
