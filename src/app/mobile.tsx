@@ -19,7 +19,7 @@ export default function MobileHome() {
         <Post {...EXAMPLE_POST} />
       </PostContainer>
 
-      <div className="fixed bottom-20 right-4 rounded-full bg-stone-200 p-4 dark:bg-stone-800">
+      <div className="fixed bottom-20 right-4 rounded-full bg-stone-200 p-4 dark:bg-muted">
         <PlusIcon
           size={32}
           onClick={() => {

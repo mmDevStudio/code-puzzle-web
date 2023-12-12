@@ -26,7 +26,7 @@ export default function UserAvatar({
       style={{ width: `${size}px`, height: `${size}px` }}
     >
       {isLoading && (
-        <div className="flex h-full w-full items-center justify-center bg-slate-200">
+        <div className="flex h-full w-full items-center justify-center bg-stone-200">
           {initials}
         </div>
       )}

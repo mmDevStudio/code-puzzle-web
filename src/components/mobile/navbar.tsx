@@ -18,12 +18,12 @@ function Navbar(
   }
 ) {
   return (
-    <div className="flex h-16 w-full shrink-0 border-t-2 bg-slate-100 dark:border-stone-800 dark:bg-stone-900">
+    <div className="flex h-16 w-full shrink-0 border-t-2 bg-stone-100 dark:border-stone-800 dark:bg-stone-900">
       <div className="flex w-1/5 items-center justify-center">
         <SearchIcon
           height={24}
           width={24}
-          className={`text-slate-700 dark:text-stone-200 ${
+          className={`text-stone-700 dark:text-stone-200 ${
             selected === 'search' ? 'fill-current' : ''
           }`}
         />
@@ -32,7 +32,7 @@ function Navbar(
         <SendHorizontalIcon
           height={24}
           width={24}
-          className={`text-slate-700 dark:text-stone-200 ${
+          className={`text-stone-700 dark:text-stone-200 ${
             selected === 'chat' ? 'fill-current' : ''
           }`}
         />
@@ -41,7 +41,7 @@ function Navbar(
         <HomeIcon
           height={32}
           width={32}
-          className={`text-slate-700 dark:text-stone-200 ${
+          className={`text-stone-700 dark:text-stone-200 ${
             selected === 'home' ? 'fill-current' : ''
           }`}
           onClick={() => {
@@ -53,7 +53,7 @@ function Navbar(
         <PuzzleIcon
           height={24}
           width={24}
-          className={`text-slate-700 dark:text-stone-200 ${
+          className={`text-stone-700 dark:text-stone-200 ${
             selected === 'projects' ? 'fill-current' : ''
           }`}
         />
@@ -62,7 +62,7 @@ function Navbar(
         <UserIcon
           height={24}
           width={24}
-          className={`text-slate-700 dark:text-stone-200 ${
+          className={`text-stone-700 dark:text-stone-200 ${
             selected === 'user' ? 'fill-current' : ''
           }`}
         />
