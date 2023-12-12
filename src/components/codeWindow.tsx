@@ -42,11 +42,7 @@ function CodeWindow({ files }: CodeWindowProps) {
             <button
               key={file.filename}
               type="button"
-<<<<<<< HEAD
               className={`dark:bg-stone-8 -mb-[1px] rounded-t-lg border border-stone-200 px-2 py-1 text-xs font-medium text-muted dark:border-muted
-=======
-              className={`dark:bg-stone-8 -mb-[1px] rounded-t-lg border border-stone-200 px-2 py-1 text-xs font-medium text-muted dark:border-stone-500
->>>>>>> b294fd59b8fd42ecec83f234503a528ebf281014
               ${
                 isSelected
                   ? 'border-b-stone-100 bg-stone-100 text-primary dark:border-b-stone-800 dark:bg-stone-800 dark:text-onPrimary'
