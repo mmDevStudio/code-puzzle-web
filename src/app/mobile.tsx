@@ -1,6 +1,6 @@
 import { PlusIcon } from 'lucide-react'
 
-import FeedSelector from '@/components/mobile/feed-selector'
+import FeedSelector from '@/components/mobile/feedSelector'
 import Navbar from '@/components/mobile/navbar'
 import Post from '@/components/post'
 import PostContainer from '@/components/postContainer'
@@ -19,7 +19,7 @@ export default function MobileHome() {
         <Post {...EXAMPLE_POST} />
       </PostContainer>
 
-      <div className="fixed bottom-20 right-4 rounded-full bg-stone-200 p-4 dark:bg-stone-800">
+      <div className="fixed bottom-20 right-4 rounded-full bg-stone-200 p-4 dark:bg-onPrimary">
         <PlusIcon
           size={32}
           onClick={() => {

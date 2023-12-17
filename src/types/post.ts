@@ -1,7 +1,7 @@
 import { Project } from './project'
 import { EXAMPLE_USERS, UserType } from './user'
 
-export type CodeBlock = [{ filename: string; languageId: string; code: string }]
+export type CodeBlock = { filename: string; languageId: string; code: string }[]
 
 export type TextBlock = string
 
@@ -49,6 +49,11 @@ const Counter: React.FC = () => {
   );
 };`,
         },
+        {
+          filename: 'blabla.html',
+          languageId: 'html',
+          code: `<html>uwu</html>`,
+        },
       ],
     },
     {
@@ -72,15 +77,3 @@ const Counter: React.FC = () => {
   },
   relTimestamp: '1h',
 }
-
-// spread all properties of EXAMPLE_POST on the <Post /> component
-/*
-  <Post
-    id={EXAMPLE_POST.id}
-    author={EXAMPLE_POST.author}
-    content={EXAMPLE_POST.content}
-    interactions={EXAMPLE_POST.interactions}
-    project={EXAMPLE_POST.project}
-    relTimestamp={EXAMPLE_POST.relTimestamp}
-  />
-*/
